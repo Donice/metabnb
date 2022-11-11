@@ -75,12 +75,12 @@ const Home = () => {
       </div>
 
       <div>
-        <div className="m-4">
+        <div className="m-4 md:mx-20 md:my-24">
           <h1 className="text-2xl text-center md:mb-10 md:text-4xl md:text-center">
             Inspiration for your next adventure
           </h1>
           <div>
-            <div className="my-4 grid gap-x-1 gap-y-2 grid-cols-2 md:grid-cols-4">
+            <div className="my-4 grid gap-x-1 gap-y-1 grid-cols-2 md:grid-cols-4">
               {places.map((place) => (
                 <div className="border rounded-xl p-3 m-2 text-[10px] md:m-4 md:text-[12px]">
                   <img src={place} alt="place" />
@@ -115,7 +115,7 @@ const Home = () => {
 
         </div>
 
-        <div className="w-full md:w-1/2 p-4">
+        <div className="w-full md:w-1/2 p-4 md:mr-12">
           <img src={heroImage2} alt="home" />
         </div>
       </div>
