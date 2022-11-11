@@ -13,12 +13,8 @@ import Five from "./../img/cards/5.svg";
 import Six from "./../img/cards/6.svg";
 import Seven from "./../img/cards/7.svg";
 import Eight from "./../img/cards/8.svg";
-import Nine from "./../img/cards/9.svg";
-import Ten from "./../img/cards/10.svg";
-import Eleven from "./../img/cards/11.svg";
-import Twelve from "./../img/cards/12.svg";
 
-// import BsStarFill from 'react-icons/bs'
+import { FaStar} from 'react-icons/fa'
 
 const Home = () => {
   const places = [
@@ -30,10 +26,6 @@ const Home = () => {
     Six,
     Seven,
     Eight,
-    Nine,
-    Ten,
-    Eleven,
-    Twelve,
   ];
 
   return (
@@ -92,7 +84,13 @@ const Home = () => {
                     <span>2345km away</span>
                     <b>available for 2weeks stay</b>
                   </div>
-                  {/* <BsStarFill /> */}
+                  <div className="flex my-2 text-fuchsia-800">
+                    <FaStar className="mr-1"/>
+                    <FaStar className="mx-1"/>
+                    <FaStar className="mx-1"/>
+                    <FaStar className="mx-1"/>
+                    <FaStar className="mx-1"/>
+                  </div>
 
                 </div>
               ))}
