@@ -1,5 +1,6 @@
 import './index.css';
-import Navbar from './components/navbar';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 import Home from './pages/Home';
 import PlaceToStay from './pages/PlaceToStay';
 import {
@@ -14,8 +15,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/place-to-stay" element={<PlaceToStay />} />
-     
       </Routes>
+      <Footer />
     </div>
   );
 }
