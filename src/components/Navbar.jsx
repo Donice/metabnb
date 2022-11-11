@@ -2,6 +2,8 @@ import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Logo from "./../img/logo.svg";
+import {useState} from 'react';
+import Modal from "./Modal";
 import { Link } from "react-router-dom";
 
 const navigation = [
@@ -15,7 +17,17 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
+
 export default function Navbar() {
+
+  const [isShown, setIsShown] = useState(false);
+
+  const handleClick = event => {
+    // 👇️ toggle shown state
+    setIsShown(current => !current);
+
+  };
+
   return (
     <Disclosure as="nav" className="bg-white">
       {({ open }) => (
@@ -72,13 +84,15 @@ export default function Navbar() {
                   className="rounded-md bg-fuchsia-800 py-2 px-3 text-white hover:bg-fuchsia-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                 >
                   <a
-                    href="#"
+                    to="#"
                     className="hover:text-white"
+                    onClick={handleClick}
                   >
                     Connect wallet
                   </a>
                 </button>
-
+              {isShown && <Modal />}
+              
                 {/* Profile dropdown */}
                 <Menu as="div" className="relative ml-3">
                   <Transition
