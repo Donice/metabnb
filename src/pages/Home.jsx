@@ -72,19 +72,19 @@ const Home = () => {
             Inspiration for your next adventure
           </h1>
           <div>
-            <div className="my-4 grid gap-x-1 gap-y-1 grid-cols-2 md:grid-cols-4">
+            <div className="my-4 grid gap-x-1 gap-y-1 grid-cols-1 md:grid-cols-4">
               {places.map((place) => (
                 <div className="border rounded-xl p-3 m-2 text-[10px] md:m-4 md:text-[12px]">
-                  <img src={place} alt="place" />
+                  <img src={place} alt="place" className="w-full" />
                   <div className="flex justify-between mt-2">
-                    <span>Desert King</span>
-                    <b>1MBT per night</b>
+                    <span className="text-[10px] md:text-lg">Desert King</span>
+                    <b className="text-[10px]">1MBT per night</b>
                   </div>
                   <div className="flex justify-between mt-2">
-                    <span>2345km away</span>
-                    <b>available for 2weeks stay</b>
+                    <span className="text-[10px]">2345km away</span>
+                    <b className="text-[10px]">available for 2weeks stay</b>
                   </div>
-                  <div className="flex my-2 text-fuchsia-800">
+                  <div className="flex my-2 text-fuchsia-800 text-[10px]">
                     <FaStar className="mr-1"/>
                     <FaStar className="mx-1"/>
                     <FaStar className="mx-1"/>
